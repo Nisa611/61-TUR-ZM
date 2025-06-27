@@ -1,0 +1,250 @@
+<html>
+<head>
+ 
+  <title>61 Turizm</title>
+  <link rel="stylesheet" href="style.css" />
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+}
+
+header {
+  background: #003366;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: url('https://source.unsplash.com/1600x600/?beach,travel') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-top: 20px;
+  background: #ff9900;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+section {
+  padding: 50px 20px;
+  background: white;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+
+
+#tours {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.tour-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tour-card {
+  background: white;
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tour-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.tour-card h3 {
+  margin: 15px 0 10px;
+  color: #003366;
+}
+
+.tour-card p {
+  margin: 0 10px 10px;
+  font-size: 15px;
+}
+
+.tour-card button {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px auto 0;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 80%;
+  transition: background-color 0.3s;
+}
+
+.tour-card button:hover {
+  background-color: #cc7a00;
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">61 Turizm</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Ana Sayfa</a></li>
+        <li><a href="#about">Hakkımızda</a></li>
+        <li><a href="#services">Hizmetler</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+  <section id="home" class="hero">
+    <h1>Hayalinizdeki Tatile 61 Turizm ile Ulaşın</h1>
+    <button onclick="scrollToSection('contact')">Bize Ulaşın</button>
+  </section>
+
+  <section id="about">
+    <h2>Hakkımızda</h2>
+    <p>61 Turizm olarak size en iyi tatil deneyimini sunuyoruz.</p>
+  </section>
+
+  <section id="services">
+    <h2>Hizmetlerimiz</h2>
+    <ul>
+      <li>Yurtiçi Turlar</li>
+      <li>Yurtdışı Turlar</li>
+      <li>Uçak Bileti</li>
+      <li>Otel Rezervasyonu</li>
+    </ul>
+  </section>
+
+<section id="tours">
+  <h2>Popüler Turlarımız</h2>
+  <div class="tour-container">
+    <!-- 1. Uzungöl -->
+    <div class="tour-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Uzungol.jpg" alt="Uzungöl" />
+      <h3>Uzungöl Turu</h3>
+      <p>3 Gün / 2 Gece – 3.500₺</p>
+      <button onclick="reserveTour('Uzungöl Turu')">Rezervasyon Yap</button>
+    </div>
+
+    <!-- 2. Ayder -->
+    <div class="tour-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Ayder_Yaylas%C4%B1_Rize_Turkey.jpg" alt="Ayder" />
+      <h3>Ayder Yaylası Turu</h3>
+      <p>2 Gün / 1 Gece – 2.900₺</p>
+      <button onclick="reserveTour('Ayder Yaylası Turu')">Rezervasyon Yap</button>
+    </div>
+
+    <!-- 3. Kapadokya -->
+    <div class="tour-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Cappadocia-balloon.jpg" alt="Kapadokya" />
+      <h3>Kapadokya Turu</h3>
+      <p>3 Gün / 2 Gece – 4.200₺</p>
+      <button onclick="reserveTour('Kapadokya Turu')">Rezervasyon Yap</button>
+    </div>
+
+    <!-- 4. Batum -->
+    <div class="tour-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Batumi.jpg" alt="Batum" />
+      <h3>Batum Turu</h3>
+      <p>2 Gün / 1 Gece – 3.200₺</p>
+      <button onclick="reserveTour('Batum Turu')">Rezervasyon Yap</button>
+    </div>
+  </div>
+</section>
+
+
+
+  <section id="contact">
+    <h2>İletişim</h2>
+    <form>
+      <input type="text" placeholder="Adınız Soyadınız" required />
+      <input type="email" placeholder="E-posta" required />
+      <textarea placeholder="Mesajınız" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 61 Turizm. Tüm hakları saklıdır.</p>
+  </footer>
+
+
+
+
+  <script src="script.js"></script>
+
+<script>
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert("Mesajınız başarıyla gönderildi. Teşekkür ederiz!");
+});
+</script>
+
+</body>
+</html>
